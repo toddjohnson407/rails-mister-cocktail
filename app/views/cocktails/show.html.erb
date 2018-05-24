@@ -1,13 +1,26 @@
-<%= @cocktail.name %>
-
-<ul>
-  <% @cocktail.doses.each do |dose|%>
-    <li>
-      <%= dose.description %>
-      <%= dose.ingredient.name %>
-     </li>
-  <% end %>
-</ul>
-
 <%= link_to "Add Dose", new_cocktail_dose_path(@cocktail) %>
 
+<div class="col s12 m7">
+  <h2 class="header center"><%= @cocktail.name %></h2>
+  <div class="card horizontal">
+    <div class="card-image">
+      <img src="https://lorempixel.com/100/190/nature/6">
+    </div>
+    <div class="card-stacked">
+      <div class="card-content">
+        <p>
+          <% @cocktail.doses.each do |dose|%>
+            <li>
+              <%= dose.description %>
+              <%= dose.ingredient.name %>
+              <%= link_to 'Destroy', dose, method: :delete, data: { confirm: 'Are you sure?' } %>
+             </li>
+          <% end %>
+        </p>
+      </div>
+      <div class="card-action">
+        <%= link_to "Add Dose", new_cocktail_dose_path(@cocktail) %>
+      </div>
+    </div>
+  </div>
+</div>
