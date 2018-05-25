@@ -9,6 +9,7 @@
     <div class="card-stacked">
       <div class="card-content">
         <p>
+          <%= cl_image_tag @article.photo, height: 300, width: 400, crop: :fill %>
           <% @cocktail.doses.each do |dose|%>
             <li>
               <%= dose.description %>

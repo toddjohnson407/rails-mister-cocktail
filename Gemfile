@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.4'
 
+gem 'carrierwave', '~> 1.2'
+gem 'cloudinary'
 gem 'figaro'
 gem 'carrierwave', '~> 1.2'
 gem 'materialize-sass'
