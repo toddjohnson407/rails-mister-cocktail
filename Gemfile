@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.4'
 
+gem 'figaro'
+gem 'carrierwave', '~> 1.2'
 gem 'materialize-sass'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass', '~> 5.0.9'
